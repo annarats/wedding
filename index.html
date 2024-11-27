@@ -239,47 +239,34 @@
     </body>
     
     <script>
-let currentIndex = 0;
-const sections = document.querySelectorAll('.album-section');
+if (window.innerWidth >= 760) {
+    // Подключение скрипта только для экранов шире 760px
+    let currentIndex = 0;
+    const sections = document.querySelectorAll('.album-section');
 
-// Function to update the active, previous, and next sections
-function updateSections(index) {
-    sections.forEach((section, i) => {
-        section.classList.remove('active', 'previous', 'next');
-        if (i === index) {
-            section.classList.add('active'); // Current section becomes active
-        } else if (i < index) {
-            section.classList.add('previous'); // Previous sections go out of view
-        } else {
-            section.classList.add('next'); // Next sections come into view
-        }
-    });
-}
-
-// Handle wheel scroll events to change sections
-document.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0 && currentIndex < sections.length - 1) {
-        currentIndex++; // Scroll down
-    } else if (e.deltaY < 0 && currentIndex > 0) {
-        currentIndex--; // Scroll up
+    function updateSections(index) {
+        sections.forEach((section, i) => {
+            section.classList.remove('active', 'previous', 'next');
+            if (i === index) {
+                section.classList.add('active'); // Current section becomes active
+            } else if (i < index) {
+                section.classList.add('previous'); // Previous sections go out of view
+            } else {
+                section.classList.add('next'); // Next sections come into view
+            }
+        });
     }
-    updateSections(currentIndex); // Update the section display
-});
 
-// Initialize the first section to make sure everything is set up correctly
-updateSections(currentIndex);
-    </script>
-<script>
-    document.querySelector('.btn_yes').addEventListener('click', (e) => {
-const button = e.target;
+    document.addEventListener('wheel', (e) => {
+        if (e.deltaY > 0 && currentIndex < sections.length - 1) {
+            currentIndex++; // Scroll down
+        } else if (e.deltaY < 0 && currentIndex > 0) {
+            currentIndex--; // Scroll up
+        }
+        updateSections(currentIndex); // Update the section display
+    });
 
-// Добавляем класс для активации кляксы
-button.classList.add('splat-active');
-
-// Удаляем класс через 0.6 секунд (время анимации), чтобы можно было повторить эффект
-setTimeout(() => {
-button.classList.remove('splat-active');
-}, 600);
-});
+    updateSections(currentIndex); // Initialize the first section
+}
 </script>
 </html>

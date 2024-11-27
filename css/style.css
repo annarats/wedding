@@ -452,27 +452,28 @@ img{
 .btn_yes {
   position: relative; /* Для правильного позиционирования псевдоэлементов */
   overflow: visible; /* Клякса может выходить за границы кнопки */
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  font-size: 44px;
+  color: #fff;
+  background: var(--primary-color);
+  border:none;
+  border-radius:50px;
+  box-shadow: 0 7px 0px var(--primary-shadow);
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  margin:0 20px;
 }
 
-.btn_yes::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: url('../image/pink-splash.png') no-repeat center;
-  background-size: contain;
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 0.6s ease-out, opacity 0.3s ease-out;
-}
-
-.btn_yes.splat-active::after {
-  width: 100px; /* Размер кляксы */
-  height: 100px;
-  left: 50%; /* Центрируем относительно кнопки */
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1); /* Раскрытие кляксы */
-  opacity: 1;
+.btn_yes:active {
+  top: 3px;
+  box-shadow: 0 2px 0px var(--primary-color);
+  transition: all .2s;
 }
 
 .btn_no{

@@ -39,9 +39,7 @@ body, html {
   transform-origin: left center;
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease;
 }
-.album-section .row{
-  height: 100%;
-}
+
 .album-section.active {
   opacity: 1;
   transform: rotateY(0deg);

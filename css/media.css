@@ -178,8 +178,4 @@
         top: 0%;
         left: 20%;
     }
-
-    .album-section::before {
-        width: 30px;
-      }
 }

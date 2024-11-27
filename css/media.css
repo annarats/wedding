@@ -13,9 +13,6 @@
         top: 0;
         left: 5%;
     }
-    .inviting_arrow {
-        top: -40%;
-    }
 }
 @media (max-width:991.8px){
     
@@ -53,6 +50,9 @@
         top: 28%;
         left: 18%;
         width: 80px;
+    }
+    .watercolor-left{
+        left: 30%;
     }
     /* child */
     .watercolor-right {
@@ -92,10 +92,6 @@
     .icon-spark_bg {
         top: -28%;
         left: 1%;
-    /* inviting */
-    }
-    .inviting_arrow {
-        top: -40%;
     }
 }
 @media (max-width: 768px) {
@@ -112,10 +108,10 @@
         transform: none;
         transition: all;
     }
-    section {
-        overflow:visible;
-      }
-      
+
+    .album-section::before{
+        display: none;
+    }
   }
   
 @media (max-width:767.8px){
@@ -135,32 +131,44 @@
     
     /* baby */
     .icon-delivery {
-        top: -24%;
+        top: 5%;
         right: 0%;
     }
+    .icon-bunny {
+        top: 10%;
+    }
     .icon-bottle {
-        top: 20%;
+        top: 30%;
         right: 5%;
         width: 100px;
     }
     .icon-pacifier {
-        top: 35%;
-        left: 22%;
+        top: 34%;
+        left: 18%;
         width: 80px;
     }
     /* child */
     .watercolor-right {
-        right: 50%;
+        left: 60%;
         top: 15%;
     }
     .icon-spark {
-        top: 17%;
-        right: 30%;
+        top: 29%;
+        right: 39%;
+    }
+    .icon-note-2 {
+        top: 35%;
+        left: 5%;
+    }
+    .icon-cupid {
+        top: 0;
+        left: 5%;
     }
     /* moving */
 
     .icon-location {
-        width: 130px;
+        width: 100px;
+        right: 0;
     }
     .icon-doodles {
         width: 150px;
@@ -170,202 +178,8 @@
         top: 0%;
         left: 20%;
     }
-    .inviting_arrow {
-        top: -35%;
-    }
+
     .album-section::before {
         width: 30px;
       }
-}
-@media (max-width:575.8px){
-
-    /* baby */
-    
-    .icon-bottle {
-        top: 12%;
-        right: 7%;
-        width: 80px;
-    }
-    
-    .icon-bunny {
-        width: 100px;
-    }
-    
-    .icon-pacifier {
-        top: 30%;
-        left: 24%;
-        width: 50px;
-    }
-    
-    .icon-delivery {
-        top: -29%;
-        height: 100px;
-    }
-    /* child */
-    .icon-champagne {
-        width: 90px;
-        right: 0;
-    }
-    
-    .icon-note-1 {
-        top: 5%;
-        left: 5%;
-    }
-    
-    .icon-note-2 {
-        top: 35%;
-        left: 5%;
-    }
-    
-    .icon-note-3 {
-        top: 50%;
-        left: 5%;
-    }
-    
-    .icon-spark {
-        top: 6%;
-        width: 120px;
-        right: 36%;
-    }
-    .watercolor-right {
-        right: 20%;
-        top: 20%;
-    }
-    /* relation */
-
-    .icon-cupid {
-        width: 90px;
-    }
-    
-    .icon-heart1 {
-        width: 70px;
-    }
-    
-    .icon-heart2 {
-        top: 50%;
-        width: 150px;
-        height: 150px;
-        left: 3%;
-        animation: size 1s linear infinite;
-    }
-    /* moving */
-
-    .icon-airplane {
-        width: 80px;
-    }
-    
-    .icon-cloud {
-        top: 10%;
-        left: 0;
-        width: 150px;
-        height: 150px;
-    }
-    
-    .icon-location {
-        bottom: 15%;
-        width: 50px;
-        right: 5%;
-    }
-    
-    .icon-doodles {
-        bottom: 8%;
-        width: 100px;
-    }
-    /* proposal */
-    
-    .icon-spark_bg {
-        top: -13%;
-        width: 300px;
-    }
-    /* inviting */
-    
-    .inviting_arrow {
-        top: -25%;
-    }
-    
-    .vote{
-        flex-direction: column;
-    }
-    
-    .btn_yes{
-        margin:30px 0;
-    }
-}
-@media (max-width:390.8px){
-
-    /* baby */
-    
-    .icon-bottle {
-        top: 0;
-        right: 3%;
-    }
-    /* child */
-    
-    .icon-spark {
-        top: 0%;
-        right: 32%;
-    }
-    /* school */
-
-    .icon-bell {
-        width: 80px;
-    }
-    
-    .icon-book {
-        left: 0;
-        width: 100px;
-    }
-    
-    .icon-globe {
-        right: 0;
-        width: 80px;
-    }
-    
-    .icon-paper {
-        width: 50px;
-        right: 0;
-    }
-    /* relation */
-
-    .icon-cupid {
-        width: 70px;
-        top: -5%;
-    }
-    
-    .icon-heart1 {
-        width: 50px;
-    }
-    
-    .icon-heart2 {
-        width: 50px;
-    }
-    /* moving */
-
-    .icon-airplane {
-        width: 50px;
-    }
-    
-    .icon-cloud {
-        height: 100px;
-    }
-    
-    .icon-location {
-        bottom: 0;
-    }
-    
-    .icon-doodles {
-        bottom: 0;
-        width: 80px;
-    }
-    /* proposal */
-    .icon-spark_bg {
-        top: -35%;
-        width: 200px;
-    }
-    /* inviting */
-    
-    .inviting_arrow {
-        top: -20%;
-    }
-    
 }

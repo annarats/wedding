@@ -208,7 +208,6 @@
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="title">
-                                <img src="icons/arrow2.svg" alt="" class="inviting_arrow">
                                 <div class="year">
                                     <span class="digit">0</span>
                                     <span class="digit">5</span>
@@ -237,36 +236,63 @@
             </section>
         </div>
     </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Инициализация кнопки "Буду!"
+        const btnYes = document.querySelector('.btn_yes');
+        if (btnYes) {
+            btnYes.addEventListener('click', () => {
+                // Находим элементы для изменения текста
+                const title = document.querySelector('.title h3');
+                const vote = document.querySelector('.vote');
+
+                // Обновляем только текст внутри заголовка
+                title.textContent = 'Спасибо за подтверждение!';
+
+                // Добавляем новый параграф
+                const p = document.createElement('p');
+                p.textContent = 'Мы рады, что ты с нами!';
+                title.appendChild(p);
+
+                // Скрываем блок с кнопками
+                vote.style.display = 'none'; 
+            });
+        }
+    });
+    </script>
     
     <script>
-if (window.innerWidth >= 760) {
-    // Подключение скрипта только для экранов шире 760px
-    let currentIndex = 0;
-    const sections = document.querySelectorAll('.album-section');
-
-    function updateSections(index) {
-        sections.forEach((section, i) => {
-            section.classList.remove('active', 'previous', 'next');
-            if (i === index) {
-                section.classList.add('active'); // Current section becomes active
-            } else if (i < index) {
-                section.classList.add('previous'); // Previous sections go out of view
-            } else {
-                section.classList.add('next'); // Next sections come into view
-            }
-        });
-    }
-
-    document.addEventListener('wheel', (e) => {
-        if (e.deltaY > 0 && currentIndex < sections.length - 1) {
-            currentIndex++; // Scroll down
-        } else if (e.deltaY < 0 && currentIndex > 0) {
-            currentIndex--; // Scroll up
+    // Второй скрипт для прокрутки с колесиком мыши
+    if (window.innerWidth >= 760) {
+        let currentIndex = 0;
+        const sections = document.querySelectorAll('.album-section');
+        
+        // Обновление секций
+        function updateSections(index) {
+            sections.forEach((section, i) => {
+                section.classList.remove('active', 'previous', 'next');
+                if (i === index) {
+                    section.classList.add('active'); // Текущая секция
+                } else if (i < index) {
+                    section.classList.add('previous'); // Прошлые секции
+                } else {
+                    section.classList.add('next'); // Следующие секции
+                }
+            });
         }
-        updateSections(currentIndex); // Update the section display
-    });
+    
+        document.addEventListener('wheel', (e) => {
+            // Переключение между секциями при прокрутке колесика
+            if (e.deltaY > 0 && currentIndex < sections.length - 1) {
+                currentIndex++; // Прокрутка вниз
+            } else if (e.deltaY < 0 && currentIndex > 0) {
+                currentIndex--; // Прокрутка вверх
+            }
+            updateSections(currentIndex); // Обновление отображения секций
+        });
+    
+        updateSections(currentIndex); // Инициализация первой секции
+    }
+    </script>
 
-    updateSections(currentIndex); // Initialize the first section
-}
-</script>
 </html>

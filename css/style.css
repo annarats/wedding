@@ -437,11 +437,6 @@ img{
   padding-top: 150px;
 }
 
-.inviting_arrow{
-  position: absolute; 
-  top: -40%;
-}
-
 .vote{
   display: flex;
   align-items: center;

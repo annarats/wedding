@@ -24,6 +24,7 @@ body, html {
   overflow: hidden;
   height: 100vh;
   font-family: 'Caveat','Comic', sans-serif;
+  font-display: swap;
   color: var(--text-color);
   background-color: var(--bg-color);
 }

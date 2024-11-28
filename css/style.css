@@ -126,7 +126,7 @@ img{
   transform: translateY(-50%);
   width: 70px;
   height: 100vh; 
-  background: url('../image/Kalendar.png') center;
+  background: url('../image/Kalendar.webp') center;
   background-size: contain;
   z-index: 1;
 }
@@ -211,7 +211,7 @@ img{
 }
  /* promo */
 .promo{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.jpg) top center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.webp) top center / cover no-repeat;
 }
 
 .promo_bg {
@@ -236,7 +236,7 @@ img{
 
 /* baby */
 .baby{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.jpg) bottom center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.webp) bottom center / cover no-repeat;
 }
 
 .icon-bottle {
@@ -271,7 +271,7 @@ img{
 
 /* child */
 .child{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.jpg) top center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.webp) top center / cover no-repeat;
 }
 
 .icon-champagne {
@@ -311,7 +311,7 @@ img{
 }
  /* school */
 .school{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.jpg) bottom center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.webp) bottom center / cover no-repeat;
 }
 .icon-bell {
   top: 25%;
@@ -346,7 +346,7 @@ img{
 
 /* relation */
 .relation{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.jpg) top center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.webp) top center / cover no-repeat;
  }
 
  .icon-cupid {
@@ -375,7 +375,7 @@ img{
 
 /* moving */
 .moving{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.jpg) bottom center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.webp) bottom center / cover no-repeat;
  }
  
  .icon-airplane {
@@ -410,7 +410,7 @@ img{
 
 /* proposal */
 .proposal{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.jpg) top center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.webp) top center / cover no-repeat;
   position: relative;
 }
 
@@ -425,7 +425,7 @@ img{
 
 /* inviting */
 .inviting{
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.jpg) bottom center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgdown.webp) bottom center / cover no-repeat;
   padding-top: 150px;
 }
 

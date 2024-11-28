@@ -7,16 +7,16 @@
 
 :root {
     --primary-color: #FF80A6;
-    --primary-shadow: #D100D1;
+    --primary-shadow: #c46380;
     --accent-color: #1C62C3;
-    --accent-shadow: #0000D1;
+    --accent-shadow: #174A7C;
 }
 body, html {
   margin: 0;
   padding: 0;
   overflow: hidden;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'Caveat', sans-serif;
   color:rgb(0, 0, 99)
 }
 
@@ -31,6 +31,7 @@ body, html {
 .album-section {
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   opacity: 0;
@@ -113,6 +114,7 @@ img{
   align-items: center;
   position: relative;
   z-index: 1;
+  padding: 0 10px;
 }
 
 .album-section::before {
@@ -120,7 +122,7 @@ img{
   position: absolute;
   top: 50%; /* Центрируем пружину по вертикали */
   transform: translateY(-50%); /* Смещаем пружину вверх на половину ее высоты для точного центрирования */
-  width: 100px; /* Ширина картинки пружины */
+  width: 70px; /* Ширина картинки пружины */
   height: 100vh; /* Задаем фиксированную высоту для пружины */
   background: url('../image/Kalendar.png') center;
   background-size: contain; /* Масштабируем картинку по ширине/высоте */
@@ -175,6 +177,7 @@ img{
   font-size: 3rem;
   font-weight: bold;
   color: #FBA8BC;
+  padding: 0 10px;
 }
 
 .year.visible {
@@ -245,7 +248,7 @@ img{
 }
 
 .icon-bottle {
-  top: 30%;
+  top: 35%;
   right: -1%;
   height: 180px;
   width: 180px;
@@ -253,22 +256,22 @@ img{
 }
 
 .icon-bunny {
-  top: 0%;
+  top: 20%;
   width: 150px;
   height: 130px;
   left: 10%;
 }
 
 .icon-pacifier {
-  top: 37%;
-  left: 21%;
+  top: 38%;
+  left: 22%;
   width: 100px;
   height: 100px;
   animation: rotate 1s linear infinite;
 }
 
 .icon-delivery {
-  top: -30%;
+  top: 10%;
   right: 0%;
   height: 150px;
   width: 150px;
@@ -290,27 +293,27 @@ img{
 
 .icon-note-1 {
   top: 20%;
-  left: 0;
+  left: 10%;
   animation: size 1s linear infinite;
 }
 
 .icon-note-2 {
-  top: 35%;
-  left: -5%;
+  top: 30%;
+  left: 5%;
   animation: size 1s linear infinite;
 }
 
 .icon-note-3 {
-  top: 50%;
-  left: 0;
+  top: 40%;
+  left: 8%;
   animation: size 1s linear infinite;
 }
 
 .icon-spark {
-  top: 22%;
+  top: 37%;
   width: 220px;
   height: 220px;
-  right: 33%;
+  right: 32%;
   z-index: 0;
   animation: size 3s linear infinite;
 }
@@ -354,8 +357,8 @@ img{
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../image/bgup.jpg) top center / cover no-repeat;
  }
 
-.icon-cupid {
-  top: 0;
+ .icon-cupid {
+  top: 5%;
   left: 0;
   width: 150px;
   height: 150px;
@@ -363,7 +366,7 @@ img{
 }
 
 .icon-heart1 {
-  top: 0;
+  top: 10%;
   width: 120px;
   height: 120px;
   right: 10%;
@@ -371,7 +374,7 @@ img{
 }
 
 .icon-heart2 {
-  top: 50%;
+  top: 60%;
   width: 150px;
   height: 150px;
   left: 3%;
@@ -420,8 +423,8 @@ img{
 }
 
 .icon-spark_bg {
-  top: 10%;
-  left: 18%;
+  top: 20%;
+  left: 22%;
   width: 400px;
   height: 400px;
   z-index: 0;
@@ -440,34 +443,46 @@ img{
   justify-content: center;
   margin: 30px 0;
 }
-
 .btn_yes {
-  position: relative; /* Для правильного позиционирования псевдоэлементов */
-  overflow: visible; /* Клякса может выходить за границы кнопки */
+  position: relative;
   width: 300px;
   height: 80px;
-  text-align: center;
-  font-size: 44px;
-  color: #fff;
-  background: var(--primary-color);
-  border:none;
-  border-radius:50px;
+  font-size: 34px;
+  color: white;
+  background-color: var(--primary-color);
   box-shadow: 0 7px 0px var(--primary-shadow);
-  display: inline-block;
-  transition: all .2s;
-  position: relative;
-  position: relative;
-  top: 0;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
-  margin:0 20px;
+}
+/* Капля для кнопки .btn_yes */
+.droplet-yes {
+  position: absolute;
+  background-color: var(--primary-color); /* Цвет для кнопки .btn_yes */
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: droplet 1.5s ease-out forwards;
 }
 
-.btn_yes:active {
-  top: 3px;
-  box-shadow: 0 2px 0px var(--primary-color);
-  transition: all .2s;
+/* Капля для кнопки .btn_no */
+.droplet-no {
+  position: absolute;
+  background-color: var(--accent-color); /* Цвет для кнопки .btn_no */
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: droplet 1.5s ease-out forwards;
 }
 
+@keyframes droplet {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.5) translate(-50%, -50%); /* Начальный размер капли */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10) translate(-50%, -50%); /* Капля расплывается на весь блок */
+  }
+}
 .btn_no{
   width: 200px;
   height: 40px;

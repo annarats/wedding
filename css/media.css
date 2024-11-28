@@ -10,8 +10,8 @@
         right: -7%;
     }
     .icon-spark_bg {
-        top: 0;
-        left: 5%;
+        top: 20%;
+        left: 8%;
     }
 }
 @media (max-width:991.8px){
@@ -33,21 +33,21 @@
 
     /* baby */
     .icon-delivery {
-        top: -54%;
+        top: -10%;
     }
     .icon-bunny {
-        top: -20%;
+        top: 0%;
         width: 150px;
         height: 130px;
         left: 0;
     }
     .icon-bottle {
-        top: 10%;
+        top: 27%;
         right: 0;
         width: 100px;
     }
     .icon-pacifier {
-        top: 28%;
+        top: 30%;
         left: 18%;
         width: 80px;
     }
@@ -88,10 +88,8 @@
     .icon-doodles {
         width: 80px;
     }
-    /* proposal */
     .icon-spark_bg {
-        top: -28%;
-        left: 1%;
+        top: 10%;
     }
 }
 @media (max-width: 768px) {
@@ -105,6 +103,7 @@
     .album-section{
         position: relative;
         opacity: 1;
+        height:auto;
         transform: none;
         transition: all;
     }
@@ -112,9 +111,6 @@
     .album-section::before{
         display: none;
     }
-  }
-  
-@media (max-width:767.8px){
     section{
         padding: 50px 0;
     }
@@ -138,12 +134,12 @@
         top: 10%;
     }
     .icon-bottle {
-        top: 30%;
-        right: 5%;
+        top: 28%;
+        right: 0%;
         width: 100px;
     }
     .icon-pacifier {
-        top: 34%;
+        top: 32%;
         left: 18%;
         width: 80px;
     }
@@ -173,9 +169,14 @@
     .icon-doodles {
         width: 150px;
     }
-    /* proposal */
     .icon-spark_bg {
-        top: 0%;
-        left: 20%;
+        right: 0;
+        top: 15%;
     }
-}
+    .vote {
+        flex-direction: column;
+    }
+    .vote button {
+        margin-bottom: 20px;
+    }
+  }

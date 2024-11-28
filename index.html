@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Маленькая история</title>
-        
         <link rel="icon" href="icons/fav.png">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -65,6 +64,7 @@
                     </div>
                 </div>
                 <img src="image/pink-splash.png" alt="" class="watercolor-left">
+                <img src="image/splash2.png" alt="" class="watercolor-down">
             </section>
             <section class="album-section child">
                 <div class="container">
@@ -95,6 +95,7 @@
                     </div>
                 </div>
                 <img src="image/blue-spalsh.png" alt="" class="watercolor-right">
+                <img src="image/pink-splash.png" alt="" class="watercolor-center">
             </section>
             <section class="album-section school">
                 <div class="container">
@@ -123,6 +124,7 @@
                     </div>
                 </div>
                 <img src="image/pink2-splash.png" alt="" class="watercolor-center">
+                <img src="image/splash3.png" alt="" class="watercolor-left">
             </section>
             <section class="album-section relation">
                 <div class="container">
@@ -150,6 +152,7 @@
                     </div>
                 </div>
                 <img src="image/blue2-splash.png" alt="" class="watercolor-right">
+                <img src="image/splash2.png" alt="" class="watercolor-center">
             </section>
             <section class="album-section moving">
                 <div class="container">
@@ -177,6 +180,8 @@
                         </div>
                     </div>
                 </div>
+                <img src="image/splash.png" alt="" class="watercolor-left">
+                <img src="image/splash2.png" alt="" class="watercolor-down">
             </section>
             <section class="album-section proposal">
                 <div class="container">
@@ -201,7 +206,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="image/pink2-splash.png" alt="" class="watercolor-down">
+                <img src="image/splash3.png" alt="" class="watercolor-down">
+                <img src="image/splash3.png" alt="" class="watercolor-left">
+                <img src="image/blue-spalsh.png" alt="" class="watercolor-right">
             </section>
             <section class="album-section inviting">
                 <div class="container">
@@ -236,30 +243,46 @@
             </section>
         </div>
     </body>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        // Инициализация кнопки "Буду!"
-        const btnYes = document.querySelector('.btn_yes');
-        if (btnYes) {
-            btnYes.addEventListener('click', () => {
-                // Находим элементы для изменения текста
-                const title = document.querySelector('.title h3');
-                const vote = document.querySelector('.vote');
-
-                // Обновляем только текст внутри заголовка
-                title.textContent = 'Спасибо за подтверждение!';
-
-                // Добавляем новый параграф
-                const p = document.createElement('p');
-                p.textContent = 'Мы рады, что ты с нами!';
-                title.appendChild(p);
-
-                // Скрываем блок с кнопками
-                vote.style.display = 'none'; 
+    <script>document.querySelectorAll('.btn_yes, .btn_no').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          const rect = btn.getBoundingClientRect();
+      
+          // Выбор класса для капель в зависимости от кнопки
+          const dropletClass = btn.classList.contains('btn_yes') ? 'droplet-yes' : 'droplet-no';
+      
+          // Генерация "кляксы" (несколько капель)
+          for (let i = 0; i < 20; i++) {  // Увеличиваем количество капель
+            const droplet = document.createElement('div');
+            droplet.classList.add(dropletClass);
+      
+            // Вычисление случайных смещений по X и Y относительно клика
+            const angle = Math.random() * 2 * Math.PI; // Случайный угол (от 0 до 2π)
+            const distance = Math.random() * 500 + 500; // Случайная дистанция от точки клика
+      
+            // Смещения по осям
+            const dx = Math.cos(angle) * distance; // Смещение по X
+            const dy = Math.sin(angle) * distance; // Смещение по Y
+      
+            // Начальная позиция капли (по клику)
+            droplet.style.left = `${e.clientX - rect.left + dx}px`;
+            droplet.style.top = `${e.clientY - rect.top + dy}px`;
+      
+            // Установка случайного размера капли
+            const size = Math.random() * 60 + 40; // Увеличиваем размер капель
+            droplet.style.width = `${size}px`;
+            droplet.style.height = `${size}px`;
+      
+            // Добавление капли в DOM
+            btn.appendChild(droplet);
+      
+            // Удаление капли после завершения анимации
+            droplet.addEventListener('animationend', () => {
+              droplet.remove();
             });
-        }
-    });
-    </script>
+          }
+        });
+      });</script>
+
     
     <script>
     // Второй скрипт для прокрутки с колесиком мыши

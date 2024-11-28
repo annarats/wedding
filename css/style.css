@@ -7,12 +7,6 @@
     font-style: italic;
     font-display: swap; 
 }
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/Comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
 :root {
   --primary-color: #FF80A6;
   --primary-shadow: #c46380;

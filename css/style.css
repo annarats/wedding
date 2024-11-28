@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Caveat';
     src:
-    url('../fonts/Caveat.woff2') format('woff2'),
-    url('../fonts/Caveat.woff') format('woff'),
-    url('../fonts/Caveat.ttf') format('truetype');
+    url('/fonts/Caveat.woff2') format('woff2'),
+    url('/fonts/Caveat.woff') format('woff'),
+    url('/fonts/Caveat.ttf') format('truetype');
     font-weight: normal; 
     font-style: italic;
 }

@@ -36,7 +36,9 @@ body, html {
   overflow: hidden;
   perspective: 1200px;
 }
-
+body{
+  font-family: 'Caveat', sans-serif;
+}
 .album-section {
   position: absolute;
   width: 100%;

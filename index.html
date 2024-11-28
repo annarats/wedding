@@ -243,79 +243,8 @@
             </section>
         </div>
     </body>
-    <script>document.querySelectorAll('.btn_yes, .btn_no').forEach(btn => {
-        btn.addEventListener('click', function (e) {
-          const rect = btn.getBoundingClientRect();
-      
-          // Выбор класса для капель в зависимости от кнопки
-          const dropletClass = btn.classList.contains('btn_yes') ? 'droplet-yes' : 'droplet-no';
-      
-          // Генерация "кляксы" (несколько капель)
-          for (let i = 0; i < 20; i++) {  // Увеличиваем количество капель
-            const droplet = document.createElement('div');
-            droplet.classList.add(dropletClass);
-      
-            // Вычисление случайных смещений по X и Y относительно клика
-            const angle = Math.random() * 2 * Math.PI; // Случайный угол (от 0 до 2π)
-            const distance = Math.random() * 500 + 500; // Случайная дистанция от точки клика
-      
-            // Смещения по осям
-            const dx = Math.cos(angle) * distance; // Смещение по X
-            const dy = Math.sin(angle) * distance; // Смещение по Y
-      
-            // Начальная позиция капли (по клику)
-            droplet.style.left = `${e.clientX - rect.left + dx}px`;
-            droplet.style.top = `${e.clientY - rect.top + dy}px`;
-      
-            // Установка случайного размера капли
-            const size = Math.random() * 60 + 40; // Увеличиваем размер капель
-            droplet.style.width = `${size}px`;
-            droplet.style.height = `${size}px`;
-      
-            // Добавление капли в DOM
-            btn.appendChild(droplet);
-      
-            // Удаление капли после завершения анимации
-            droplet.addEventListener('animationend', () => {
-              droplet.remove();
-            });
-          }
-        });
-      });</script>
 
-    
-    <script>
-    // Второй скрипт для прокрутки с колесиком мыши
-    if (window.innerWidth >= 760) {
-        let currentIndex = 0;
-        const sections = document.querySelectorAll('.album-section');
-        
-        // Обновление секций
-        function updateSections(index) {
-            sections.forEach((section, i) => {
-                section.classList.remove('active', 'previous', 'next');
-                if (i === index) {
-                    section.classList.add('active'); // Текущая секция
-                } else if (i < index) {
-                    section.classList.add('previous'); // Прошлые секции
-                } else {
-                    section.classList.add('next'); // Следующие секции
-                }
-            });
-        }
-    
-        document.addEventListener('wheel', (e) => {
-            // Переключение между секциями при прокрутке колесика
-            if (e.deltaY > 0 && currentIndex < sections.length - 1) {
-                currentIndex++; // Прокрутка вниз
-            } else if (e.deltaY < 0 && currentIndex > 0) {
-                currentIndex--; // Прокрутка вверх
-            }
-            updateSections(currentIndex); // Обновление отображения секций
-        });
-    
-        updateSections(currentIndex); // Инициализация первой секции
-    }
-    </script>
+    <script src="js/buttons.js"></script>    
+    <script src="js/screen.js"></script>
 
 </html>

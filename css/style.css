@@ -10,19 +10,22 @@
   font-weight: normal; 
   font-style: italic;
 }
+
 :root {
-    --primary-color: #FF80A6;
-    --primary-shadow: #c46380;
-    --accent-color: #1C62C3;
-    --accent-shadow: #174A7C;
+  --primary-color: #FF80A6;
+  --primary-shadow: #c46380;
+  --accent-color: #1C62C3;
+  --accent-shadow: #174A7C;
+  --text-color: #000063;
+  --bg-color: #f9f9f9;
 }
+
 body, html {
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   height: 100vh;
   font-family: 'Caveat','Comic', sans-serif;
-  color:rgb(0, 0, 99)
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .album-container {
@@ -36,7 +39,7 @@ body, html {
 .album-section {
   position: absolute;
   width: 100%;
-  height: 100%!important;
+  height: 100%;
   top: 0;
   left: 0;
   opacity: 0;
@@ -56,10 +59,6 @@ body, html {
 
 .album-section.next {
   transform: rotateY(-10deg);
-}
-body{
-  font-family: 'Caveat', sans-serif;
-  background-color: #f9f9f9;
 }
 
 section {
@@ -83,6 +82,9 @@ p{
 
 img{
   z-index: 1;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .icons {
@@ -104,11 +106,6 @@ img{
   align-items: center;
 }
 
-img{
-  max-width: 100%;
-  height: auto; /* Это гарантирует, что изображение будет адаптироваться по ширине */
-  object-fit: contain; /* Чтобы картинка не выходила за пределы родительского контейнера */
-}
 .title {
   position: relative;
   z-index: 1;
@@ -125,14 +122,15 @@ img{
 .album-section::before {
   content: "";
   position: absolute;
-  top: 50%; /* Центрируем пружину по вертикали */
-  transform: translateY(-50%); /* Смещаем пружину вверх на половину ее высоты для точного центрирования */
-  width: 70px; /* Ширина картинки пружины */
-  height: 100vh; /* Задаем фиксированную высоту для пружины */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 100vh; 
   background: url('../image/Kalendar.png') center;
-  background-size: contain; /* Масштабируем картинку по ширине/высоте */
+  background-size: contain;
   z-index: 1;
 }
+
 .text-right{
   text-align: right;
 }
@@ -177,6 +175,7 @@ img{
   z-index: 0;
   opacity: .2;
 }
+
 .year {
   display: flex;
   font-size: 3rem;
@@ -187,40 +186,28 @@ img{
 
 .year.visible {
   opacity: 1;
-  transform: translateY(0); /* Всплывание */
+  transform: translateY(0);
 }
 
-/* Стиль для каждой цифры */
 .digit {
   display: inline-block;
   animation: wave 1.5s ease-in-out infinite;
 }
 
-/* Анимация для волны */
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0); /* Цифра на начальной позиции */
-  }
-  50% {
-    transform: translateY(-5px); /* Цифра поднимается */
-  }
-}
-
-/* Устанавливаем разные задержки для каждой цифры для эффекта волны */
 .year .digit:nth-child(1) {
-  animation-delay: 0s; /* Первая цифра */
+  animation-delay: 0s;
 }
 
 .year .digit:nth-child(2) {
-  animation-delay: 0.2s; /* Вторая цифра */
+  animation-delay: 0.2s;
 }
 
 .year .digit:nth-child(3) {
-  animation-delay: 0.4s; /* Третья цифра */
+  animation-delay: 0.4s;
 }
 
 .year .digit:nth-child(4) {
-  animation-delay: 0.6s; /* Четвёртая цифра */
+  animation-delay: 0.6s;
 }
  /* promo */
 .promo{
@@ -460,19 +447,18 @@ img{
   border-radius: 50px;
   cursor: pointer;
 }
-/* Капля для кнопки .btn_yes */
+
 .droplet-yes {
   position: absolute;
-  background-color: var(--primary-color); /* Цвет для кнопки .btn_yes */
+  background-color: var(--primary-color);
   border-radius: 50%;
   opacity: 0.5;
   animation: droplet 1.5s ease-out forwards;
 }
 
-/* Капля для кнопки .btn_no */
 .droplet-no {
   position: absolute;
-  background-color: var(--accent-color); /* Цвет для кнопки .btn_no */
+  background-color: var(--accent-color);
   border-radius: 50%;
   opacity: 0.5;
   animation: droplet 1.5s ease-out forwards;
@@ -481,13 +467,14 @@ img{
 @keyframes droplet {
   0% {
     opacity: 0.7;
-    transform: scale(0.5) translate(-50%, -50%); /* Начальный размер капли */
+    transform: scale(0.5) translate(-50%, -50%);
   }
   100% {
     opacity: 0;
-    transform: scale(10) translate(-50%, -50%); /* Капля расплывается на весь блок */
+    transform: scale(10) translate(-50%, -50%);
   }
 }
+
 .btn_no{
   width: 200px;
   height: 40px;

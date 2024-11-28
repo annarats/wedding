@@ -19,7 +19,6 @@
     h1{
         color:#fff;
     }
-    /* promo */
     .promo{
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../image/promo/bg_mob.png) center center / cover no-repeat;
     }
@@ -30,8 +29,6 @@
     .promo_blur {
         display: none;
     }
-
-    /* baby */
     .icon-delivery {
         top: -10%;
     }
@@ -54,7 +51,6 @@
     .watercolor-left{
         left: 30%;
     }
-    /* child */
     .watercolor-right {
         right: 60%;
         top: 15%;
@@ -73,8 +69,6 @@
         left: 0;
         width: 100px;
     }
-    /* moving */
-
     .icon-airplane {
         top: 30%;
         width: 80px;
@@ -94,20 +88,18 @@
 }
 @media (max-width: 768px) {
     .album-container {
-        overflow: visible; /* Убедитесь, что содержимое не скрыто */
-      }
-    /* Общие настройки для мобильных устройств */
+        overflow: visible;
+    }
     body, html {
       overflow: visible; 
     }
     .album-section{
         position: relative;
         opacity: 1;
-        height:auto!important;
+        height:auto;
         transform: none;
         transition: all;
     }
-
     .album-section::before{
         display: none;
     }
@@ -124,8 +116,6 @@
     p{
         font-size: 32px;
     }
-    
-    /* baby */
     .icon-delivery {
         top: 5%;
         right: 0%;
@@ -143,7 +133,6 @@
         left: 18%;
         width: 80px;
     }
-    /* child */
     .watercolor-right {
         left: 60%;
         top: 15%;
@@ -160,8 +149,6 @@
         top: 0;
         left: 5%;
     }
-    /* moving */
-
     .icon-location {
         width: 100px;
         right: 0;
@@ -179,4 +166,22 @@
     .vote button {
         margin-bottom: 20px;
     }
-  }
+    @keyframes droplet {
+        0% {
+          opacity: 0.7;
+          transform: scale(0.5) translate(30%, 30%); /* Начальный размер капли */
+        }
+        100% {
+          opacity: 0;
+          transform: scale(10) translate(30%, 30%); /* Капля расплывается на весь блок */
+        }
+    }
+}
+@media (max-width: 576px) {
+    .icon-spark_bg {
+        left: 0;
+        top: 5%;
+        width: 100%;
+        height: 100%;
+    }
+}

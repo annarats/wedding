@@ -7,7 +7,12 @@
     font-style: italic;
     font-display: swap; 
 }
-
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/Comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
 :root {
   --primary-color: #FF80A6;
   --primary-shadow: #c46380;
@@ -20,7 +25,7 @@
 body, html {
   overflow: hidden;
   height: 100vh;
-  font-family: 'Caveat', sans-serif;
+  font-family: 'Caveat', 'Comic', sans-serif;
   font-display: swap;
   color: var(--text-color);
   background-color: var(--bg-color);

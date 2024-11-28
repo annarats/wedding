@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'Caveat';
-    src: url('../fonts/Caveat.ttf') format('truetype');
-    font-weight: normal; 
-    font-style: italic;
-}
+
 
 :root {
     --primary-color: #FF80A6;

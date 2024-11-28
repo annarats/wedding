@@ -103,7 +103,7 @@
     .album-section{
         position: relative;
         opacity: 1;
-        height:auto;
+        height:auto!important;
         transform: none;
         transition: all;
     }

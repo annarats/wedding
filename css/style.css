@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Caveat';
-    src: url('../fonts/Caveat.ttf') format('truetype');
+    src: url('../fonts/Caveat.woff') format('woff'),
+         url('../fonts/Caveat.ttf') format('truetype');
     font-weight: normal; 
     font-style: italic;
 }
@@ -36,9 +37,7 @@ body, html {
   overflow: hidden;
   perspective: 1200px;
 }
-body{
-  font-family: 'Caveat', sans-serif;
-}
+
 .album-section {
   position: absolute;
   width: 100%;

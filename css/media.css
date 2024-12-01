@@ -90,8 +90,11 @@
         top: 10%;
     }
     .year {
-        font-size: 2.5rem;
+        font-size: 2rem;
     } 
+    .digit {
+        padding: 5px;
+    }
     p{
         font-size: 32px;
     }  

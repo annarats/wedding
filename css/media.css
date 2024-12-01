@@ -103,9 +103,7 @@
     body, html {
         overflow: visible;
     }
-    .promo{
-        height: 100vh;
-    }
+    
     .album-section{
         position: relative;
         opacity: 1;
@@ -121,6 +119,9 @@
     }
     section{
         padding: 30px 0;
+    }
+    .promo{
+        height: 100vh;
     }
     h1{
         font-size: 80px;

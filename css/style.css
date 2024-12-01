@@ -1,9 +1,5 @@
-@font-face {
-    font-family: 'Caveat';
-    src: url('../fonts/Caveat.ttf') format('truetype');
-    font-weight: normal; 
-    font-style: italic;
-    font-display: swap; 
+body {
+  font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, sans-serif;
 }
 :root {
   --primary-color: #FF80A6;
@@ -57,7 +53,7 @@ body, html {
 }
 
 section {
-  padding: 100px 0;
+  padding: 80px 0;
   overflow: hidden;
   position: relative;
 }
@@ -117,19 +113,19 @@ img{
 .album-section::before {
   content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 70px;
-  height: 100vh; 
-  background: url('../image/Kalendar.webp') center;
-  background-size: contain;
+  top: 0;
+  left: 0;
+  width: 6%;
+  height: 100%;
+  background: url(../image/Kalendar.webp) center center;
+  background-size: auto 100%;
+  background-repeat: repeat-y;
   z-index: 1;
 }
 
 .text-right{
   text-align: right;
 }
-
 .text-left{
   text-align: left;
 }
@@ -172,11 +168,13 @@ img{
 }
 
 .year {
+  justify-content: center;
   display: flex;
   font-size: 3rem;
   font-weight: bold;
   color: #FBA8BC;
   padding: 0 10px;
+  z-index: 1;
 }
 
 .year.visible {
@@ -187,6 +185,7 @@ img{
 .digit {
   display: inline-block;
   animation: wave 1.5s ease-in-out infinite;
+  z-index: 1;
 }
 
 .year .digit:nth-child(1) {

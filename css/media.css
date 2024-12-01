@@ -13,6 +13,10 @@
         top: 20%;
         left: 8%;
     }
+    h1{
+        font-size: 95px;
+        margin: 0;
+    }
 }
 @media (max-width:991.8px){
     
@@ -85,13 +89,16 @@
     .icon-spark_bg {
         top: 10%;
     }
+    .year {
+        font-size: 2rem;
+    } 
+    p{
+        font-size: 32px;
+    }  
 }
 @media (max-width: 768px) {
-    .album-container {
-        overflow: visible;
-    }
     body, html {
-      overflow: visible; 
+        overflow: visible;
     }
     .album-section{
         position: relative;
@@ -100,15 +107,22 @@
         transform: none;
         transition: all;
     }
+    .album-container{
+        overflow: visible;
+    }
+    .promo{
+        height: 100vh;
+    }
     .album-section::before{
         display: none;
     }
     section{
-        padding: 50px 0;
+        padding: 30px 0;
     }
     h1{
         font-size: 80px;
         color:#fff;
+        margin: 0;
     }
     h3{
         z-index: 1;

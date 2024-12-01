@@ -1,4 +1,4 @@
-if (window.innerWidth >= 760) {
+if (window.innerWidth >= 768) {
     let currentIndex = 0;
     const sections = document.querySelectorAll('.album-section');
 

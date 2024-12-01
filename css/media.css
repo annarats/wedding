@@ -110,9 +110,6 @@
     .album-container{
         overflow: visible;
     }
-    .promo{
-        height: 100vh;
-    }
     .album-section::before{
         display: none;
     }

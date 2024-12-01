@@ -199,3 +199,18 @@
         height: 100%;
     }
 }
+@media screen and (max-height: 600px) {
+    .album-section {
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .title h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .description p {
+        font-size: 24px;
+    }
+}

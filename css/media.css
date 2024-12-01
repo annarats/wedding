@@ -121,7 +121,7 @@
         padding: 30px 0;
     }
     .promo{
-        height: 100vh;
+        height: 100vh!important;
     }
     h1{
         font-size: 80px;

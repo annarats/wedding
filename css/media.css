@@ -103,6 +103,9 @@
     body, html {
         overflow: visible;
     }
+    .promo{
+        height: 100vh;
+    }
     .album-section{
         position: relative;
         opacity: 1;
